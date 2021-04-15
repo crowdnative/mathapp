@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mathapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mathapp
+  template:
+    metadata:
+      labels:
+        app: mathapp
+    spec:
+      containers:
+      - image: crowdnative/mathapp:latest
+        name: mathapp
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mathapp
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "mathapp"
+    port: 8010
+  selector:
+    app: mathapp

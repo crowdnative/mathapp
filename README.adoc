@@ -1,0 +1,16 @@
+== Simple Math App
+
+demo app for studying
+
+=== Purpose
+* demo the usage of go tools
+* demo the usage of docker
+* demo the usage of kubectl
+
+=== Usage
+TBW
+
+=== Source
+
+
+https://semaphoreci.com/community/tutorials/how-to-deploy-a-go-web-application-with-docker[How To Deploy a Go Web Application with Docker]
