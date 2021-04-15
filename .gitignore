@@ -1,0 +1,5 @@
+.env
+.go
+src/vendor
+src/main
+src/main.exe
